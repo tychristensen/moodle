@@ -47,8 +47,8 @@ class block_proprofs extends block_base {
         $url = "https://www.proprofs.com/api/classroom/v1/reports/users/";
 
         $data = [
-            "token" => "b636adb108cf9ba92eaef5018f5a6d7c",
-            "username" => "legrandconcours@sbcglobal.net",
+            "token" => "",
+            "username" => "",
             "start" => 1,
             "num" => 100
         ];
@@ -71,10 +71,10 @@ class block_proprofs extends block_base {
         //     $studentList .= "<br>" . $user["Name"] . "    " . $user["ID"];
         // }
      
-        $this->content         =  $response;
-        $this->content->header = 'test response';
-        $this->content->text   = $studentList;
-        $this->content->footer = "";
+        // $this->content         =  $response;
+        // $this->content->header = 'test response';
+        $this->content->text   = $response;
+        // $this->content->footer = "";
      
         return $this->content;
     }
